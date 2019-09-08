@@ -16,10 +16,10 @@ echo "Para iniciar o backup, digite a pasta de destino"
 read DIR_DEST
 #Condicional para testar se existe o arquivo
 
-if[ -e ${DIR_DEST}];
+if [ -e ${DIR_DEST} ];
 then
 #Se dir destino existir então cria o arquivo de backup
-tar -czpf ${DIR_DEST}/${BKP_NAME} ${DIR_ORIG}
+tar -zcvf ${DIR_DEST}/${BKP_NAME} ${DIR_ORIG}
 echo "Backup criado com sucesso!!!"
 
 else
@@ -30,4 +30,5 @@ tar -czpf ${DIR_DEST}/${BKP_NAME} ${DIR_ORIG}
 echo "Backup criado com sucesso!!!"
 fi
 
+ls -lh ${DIR_DEST}
 exit 0
